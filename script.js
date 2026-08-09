@@ -378,8 +378,8 @@ function spawnSparkle() {
   const el = document.createElement('div');
   el.className = 'sparkle';
 
-  const shapes = ['✨', '💖', '💫', '🌸'];
-  const duration = 4 + Math.random() * 3;
+  const shapes = ['✨', '💖', '🌸'];
+  const duration = 2 + Math.random() * 3;
 
   el.innerHTML = shapes[Math.floor(Math.random() * shapes.length)];
   el.style.position = 'fixed';
