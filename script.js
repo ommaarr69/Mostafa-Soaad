@@ -30,7 +30,7 @@ openScreen.addEventListener('click', () => {
   if (mainVideo) {
     mainVideo.play().catch(err => console.log('video play:', err));
   }
-  
+
   document.body.classList.remove('no-scroll');
 
   /* Fade out curtain image smoothly */
@@ -49,7 +49,7 @@ openScreen.addEventListener('click', () => {
   if (audio) {
     audio.currentTime = 0;
     audio.volume = 0;
-    
+
     // UNCOMMENT THIS LINE to enable audio
     audio.play().catch(err => console.log('audio play error:', err));
 
@@ -102,7 +102,7 @@ let allDone = false;
 function initCoin(index) {
   const canvas = document.getElementById('canvas-' + index);
   if (!canvas) return; // Skip if canvas doesn't exist
-  
+
   const ctx = canvas.getContext('2d');
   const W = canvas.width;
   const H = canvas.height;
@@ -212,12 +212,12 @@ function checkAllRevealed() {
     allDone = true;
     const hint = document.getElementById('scratch-hint');
     if (hint) hint.classList.add('done');
-    
+
     setTimeout(() => {
       fireConfetti();
       const msg = document.getElementById('married-msg');
       if (msg) msg.classList.add('show');
-      document.body.classList.remove('no-scroll');
+      // document.body.classList.remove('no-scroll');
     }, 300);
   } else if (coinsRevealed === 1) {
     const hint = document.getElementById('scratch-hint');
@@ -290,7 +290,7 @@ if (!hasLockedThisSession) {
 function fireConfetti() {
   const wrap = document.getElementById('confetti-wrap');
   if (!wrap) return;
-  
+
   wrap.style.display = 'block';
 
   const colors = [
@@ -330,7 +330,7 @@ function fireConfetti() {
 /* ════════════════════════════════
    COUNTDOWN TIMER
 ════════════════════════════════ */
-const eventDate = new Date('2026-09-12T19:00:00');
+const eventDate = new Date('2026-09-11T19:00:00');
 const pad = n => String(n).padStart(2, '0');
 
 function updateCountdown() {
