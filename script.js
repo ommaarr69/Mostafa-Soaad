@@ -244,7 +244,7 @@ let hasLockedThisSession = sessionStorage.getItem('scrollLockedInvite') === 'tru
 
 // If already locked from before, apply lock immediately
 if (hasLockedThisSession) {
-  document.body.classList.add('no-scroll');
+  // document.body.classList.add('no-scroll');
   console.log('🔄 Scroll lock restored from session storage');
 }
 
@@ -257,7 +257,7 @@ function checkAndLockOnce() {
 
   if (hasHeroEnded) {
     hasLockedThisSession = true;
-    document.body.classList.add('no-scroll');
+    // document.body.classList.add('no-scroll');
     sessionStorage.setItem('scrollLockedInvite', 'true');
     console.log('🔒 Hero ended - scroll locked for this session');
 
