@@ -983,7 +983,7 @@ body.no-scroll {
 .brand-footer {
   text-align: center;
   padding: 1.75rem 1.5rem 2.25rem;
-  background: var(--olive-dark);
+  background: linear-gradient(135deg, #fff8f5 0%, #fdf0ea 100%);
   color: var(--bg-cream);
 }
 
