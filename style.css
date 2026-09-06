@@ -20,6 +20,7 @@
   --gold-line: #b99a63;
   --shadow-card: 0 30px 80px -30px rgba(44, 16, 19, 0.28);
   --burgundy-soft: #6f1f28;
+  --burgundy: #6f1f28;
 }
 
 html {
@@ -898,10 +899,18 @@ body.no-scroll {
   opacity: .8;
 }
 
-.gallery {
+/* .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  margin-top: 10px;
+} */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
   margin-top: 10px;
 }
 
@@ -911,15 +920,25 @@ body.no-scroll {
   }
 }
 
-.polaroid {
+/* .polaroid {
   background: #fff;
   padding: 12px 12px 34px;
   border-radius: 4px;
   box-shadow: var(--shadow-card);
   transform: rotate(var(--tilt, -2deg));
   transition: transform .35s var(--ease-lux), box-shadow .35s var(--ease-lux);
+} */
+.polaroid {
+  background: #fff;
+  padding: 14px 14px 40px;
+  border-radius: 4px;
+  box-shadow: var(--shadow-card);
+  transform: rotate(var(--tilt, -2deg));
+  transition: transform .35s ease, box-shadow .35s ease;
+  width: 100%;
+  max-width: 320px;
+  flex: 0 1 320px;
 }
-
 .polaroid:hover {
   transform: rotate(0deg) scale(1.03);
   box-shadow: 0 40px 70px -20px rgba(44, 16, 19, 0.4);
@@ -954,4 +973,9 @@ body.no-scroll {
   margin-top: 10px;
   color: var(--burgundy-soft);
   font-size: 15px;
+}
+@media (max-width: 480px) {
+  .polaroid {
+    max-width: 260px;
+  }
 }
