@@ -979,3 +979,62 @@ body.no-scroll {
     max-width: 260px;
   }
 }
+
+.brand-footer {
+  text-align: center;
+  padding: 1.75rem 1.5rem 2.25rem;
+  background: var(--olive-dark);
+  color: var(--bg-cream);
+}
+
+.brand-footer-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  color: var(--olive-accent);
+  margin: 0 0 0.9rem;
+}
+
+.brand-footer-text strong {
+  color: var(--gold-soft);
+  font-weight: 500;
+}
+
+.brand-footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+.brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--bg-cream);
+  background: rgba(223, 185, 118, 0.12);
+  border: 1px solid rgba(223, 185, 118, 0.3);
+  transition: var(--transition);
+}
+
+.brand-icon:hover,
+.brand-icon:focus-visible {
+  color: var(--olive-dark);
+  background: var(--gold-accent);
+  border-color: var(--gold-accent);
+  transform: translateY(-2px);
+}
+
+.brand-icon:focus-visible {
+  outline: 2px solid var(--gold-soft);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-icon {
+    transition: none;
+  }
+}
